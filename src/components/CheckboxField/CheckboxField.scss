@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: $base-spacing;
+    font-size: $font-m;
+
+    .checkbox {
+        margin-right: 8px;
+    }
+
+    .delete-button {
+        margin-left: auto;
+        background-color: $error-color;
+        color: $white-color;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        padding: $base-spacing;
+    }
+}

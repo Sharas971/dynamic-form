@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+## Launch a project in development mode:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `npm install`
 
-## Available Scripts
+### `npm start`
+
+## Run tests:
+
+### `npm install`
+
+### `npm run test`
+
+## Available Scripts:
 
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Documentation/description:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Used 'react-hook-form' for main form functionality and 'zod' for form schema and validation.
+Both tools are very popular amongst developers, having 4M+ weekly downloads. Both are small sized dependencies and very performant.
+Also both help a lot if we would compare it to using just React and HTML. Help with state management, validations, etc. Very developer oriented tools.
 
-### `npm run eject`
+When adding new fields to the form used 'react-modal', for popup functionality. In my opinion it should be quite clear for an end user.
+You just press 'Add field' button and are greeted with a popup that has it's own small form, where you can specify what kind of field you want, how to name it, etc.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Project structure should be clear aswell. Separated main parts like components, styles, tests, etc. Every component has it's own folder with it's styles if needed.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Used minimal styling, as it wasn't required, but it still looks quite good. It's main purpose is to make sure that everything is clear and user-friendly.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Tests are written using Jest, which is included with CRA. Wrote few tests for main components 'DynamicForm' and 'AddFieldModal', to show how to do it. Production solution would have many more tests.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Used constants in helpers to keep track of everything in one place. So for example if we want to change some validation texts it would be easy. Same thing with style variables.
 
-## Learn More
+It wasn't specified what to do with form data, so I logged it in console.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+How to use:
+When you open app, you are greeted with default form with few inputs on it. There are some other default form choices to try on the bottom, just press 'Basic', 'Login' or 'Email details' buttons.
+You can delete existing field by pressing delete button right next to it. If you want to add new fields press 'Add field' button, and you will be greeted with a popup that has another form, to add your desired fields.
+Once you configured your form, you can enter data data and submit. If something is wrong, you will get a validation for a corresponding field.

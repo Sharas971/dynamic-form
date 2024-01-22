@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: $base-spacing * 2;
+    margin: $base-spacing auto;
+    max-width: 600px;
+    background-color: $white-color;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: $base-spacing;
+}

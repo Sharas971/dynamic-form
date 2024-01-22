@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: $base-spacing;
+
+    .input {
+        flex: 1;
+        padding: $base-spacing;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: $border-radius;
+        font-size: $font-m;
+    }
+
+    .delete-button {
+        margin-left: $base-spacing;
+        background-color: $error-color;
+        color: $white-color;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        padding: $base-spacing;
+    }
+}

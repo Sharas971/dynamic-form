@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+
+.react-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 500px;
+    background-color: $white-color;
+    padding: $base-spacing;
+    border-radius: $border-radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    .heading {
+        text-align: center;
+        margin-bottom: $base-spacing;
+    }
+
+    .list-container {
+        margin-bottom: $base-spacing;
+        padding: 0px;
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: calc($base-spacing / 2);
+
+            .list-input {
+                flex: 1;
+                padding: calc($base-spacing / 2);
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: $border-radius;
+            }
+
+            .delete-button {
+                margin-left: $base-spacing;
+                background-color: $error-color;
+                color: $white-color;
+                border: none;
+                border-radius: $border-radius;
+                cursor: pointer;
+                padding: calc($base-spacing / 4) calc($base-spacing / 2);
+            }
+        }
+    }
+}
