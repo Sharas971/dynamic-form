@@ -52,7 +52,6 @@ const AddFieldModal: React.FC<IInputProps> = ({
   };
 
   const onSubmit = async (data: TField) => {
-    console.log("data", data);
     await new Promise((resolve) => setTimeout(resolve, 1000)); // Used to imitate an action
     addNewField(data);
 
@@ -62,8 +61,6 @@ const AddFieldModal: React.FC<IInputProps> = ({
     });
     closeModal();
   };
-
-  console.log("errors", errors);
 
   const handleClose = () => {
     reset();
